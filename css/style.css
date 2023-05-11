@@ -72,10 +72,10 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('') no-repeat;
+    /*background: url('/assets/img/FOTO.png') no-repeat;*/
     background-size: cover;
     background-position: center;
-
+ 
 }
 
 .home-content {
@@ -241,5 +241,105 @@ section {
     width: 45%;
     height: 100%;
     background: transparent;
-    border: 2px solid red;
+    /*Dibujo de linea que ocupara el desvanecido*/
+    /*border: 2px solid red;*/
+    transition: 3s;
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+}
+
+.home-imgHover:hover {
+    background: var(--bg-color);
+    opacity: .8;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--secont-bg-color);
+    padding-bottom: 6rem;
+}
+
+.heading {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.about-img {
+    position:  relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 80%;
+    border-radius: 80%;
+    -webkit-border-radius: 80%;
+    -moz-border-radius: 80%;
+    -ms-border-radius: 80%;
+    -o-border-radius: 80%;
+    border: .2rem solid var(--main-color);
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    -moz-transform: translate(-50%, -50%) rotate(0);
+    -ms-transform: translate(-50%, -50%) rotate(0);
+    -o-transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-top: .2rem solid var(--secont-bg-color);
+    border-bottom: .2rem solid var(--secont-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+}
+/*Estilo de texto de información de Frontend*/
+.about-content {
+
+    text-align: center;
+}
+
+.about-content h3{
+    font-size: 2.6rem;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.btn-box.btns {
+    display: inline-block;
+    width: 15rem;
+}
+
+.btn-box.btns a::before {
+    background: var(--secont-bg-color);
 }
