@@ -666,4 +666,14 @@ span {
     justify-content: center;
     align-items: center;
     padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    -webkit-border-radius: .6rem;
+    -moz-border-radius: .6rem;
+    -ms-border-radius: .6rem;
+    -o-border-radius: .6rem;
+}
+.footer-iconTop a::before {
+    
 }
