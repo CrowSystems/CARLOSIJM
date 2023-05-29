@@ -2,7 +2,7 @@
 
 //scroll sections
 let sections = document.querySelectorAll('section');
-let section = document.querySelectorAll('header nav a')
+let navLikns = document.querySelectorAll('header nav a')
 
 window.onscroll = () => {
     sections.forEach(sec => {
