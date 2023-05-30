@@ -92,6 +92,7 @@ section {
 
 .home-content {
     max-width: 60rem;
+    z-index: 999;
 }
 
 .home-content h1{
@@ -784,12 +785,23 @@ span {
     .navbar .active-nav {
         position: absolute;
         top: 0;
-        left: 0;
+        left: -100%;
         width: 100%;
         height: 100%;
-        background: yellowgreen;
+        background: var(--bg-color);
         border-top: .1rem solid rgba(0, 0, 0, .2);
         z-index: -1;
+        transition: .25s ease;
+        -webkit-transition: .25s ease;
+        -moz-transition: .25s ease;
+        -ms-transition: .25s ease;
+        -o-transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active .active-nav { 
+        left: 0;
+        transition-delay: .25s;
     }
 
 
@@ -797,5 +809,31 @@ span {
         display:  block;
         font-size: 2rem;
         margin: 3rem 0;
+        transform: translateX(-20rem);
+        -webkit-transform: translateX(-20rem);
+        -moz-transform: translateX(-20rem);
+        -ms-transform: translateX(-20rem);
+        -o-transform: translateX(-20rem);
+        transition: .25s ease;
+        -webkit-transition: .25s ease;
+        -moz-transition: .25s ease;
+        -ms-transition: .25s ease;
+        -o-transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active a {
+        transform:  translateX(0);
+        -webkit-transform:  translateX(0);
+        -moz-transform:  translateX(0);
+        -ms-transform:  translateX(0);
+        -o-transform:  translateX(0);
+        transition-delay: .25s;
+    }
+
+    .home-imgHover {
+        pointer-events: none;
+        background: var(--bg-color);
+        opacity: .6;
     }
 }
